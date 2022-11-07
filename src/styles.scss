@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+  height: inherit;
+  --white: hsl(0, 0%, 100%);
+
+  --d-bg: hsl(207, 26%, 17%);
+  --d-element: hsl(209, 23%, 22%);
+  --d-text: var(--white);
+
+  --l-bg: hsl(0, 0%, 98%);
+  --l-element: var(--white);
+  --l-text: hsl(200, 15%, 8%);
+  --l-input: hsl(0, 0%, 52%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 800;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.shadow {
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+  &-down {
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.ng-valid, .ng-dirty, .ng-touched {
+  border: none !important ;
+  outline: none !important;
+}

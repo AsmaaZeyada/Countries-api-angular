@@ -1,0 +1,49 @@
+.drop-down {
+  position: relative;
+  cursor: pointer;
+  max-width: 100%;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  @media (min-width: 520px) {
+    margin-top: 0;
+  }
+
+  &-label {
+    display: flex;
+    width: 140px;
+    justify-content: space-between;
+  }
+
+  &-options {
+    border-radius: 0.25rem;
+    position: absolute;
+    background-color: #fff;
+    top: 110%;
+    left: 0%;
+    z-index: 10;
+    width: 100%;
+    list-style: none;
+    padding: 1rem 0 1rem 1rem;
+  }
+
+
+  li {
+    padding: 0.2rem;
+  }
+
+  :host-context(.light) {
+    .drop-down,
+    .drop-down-options {
+      background-color: var(--l-element);
+    }
+  }
+
+  :host-context(.dark) {
+    .drop-down,
+    .drop-down-options {
+      background-color: var(--d-element);
+    }
+  }
+}

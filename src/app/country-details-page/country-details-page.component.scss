@@ -1,0 +1,135 @@
+.country {
+  padding: 2rem 1rem;
+  @media (min-width: 768px) {
+    padding: 5rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/10;
+    @media (min-width: 376px) {
+      // height: 50%;
+
+    }
+
+  }
+
+  h3 {
+    padding-top: 2rem;
+    @media (min-width: 376px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  transition: all 0.1s ease-in-out;
+
+
+  button {
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 4rem;
+    border: none;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+
+  }
+
+  p {
+    padding: 0.5rem 0;
+  }
+
+  &-container {
+
+    @media (min-width: 769px) {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 40%;
+        height: 50%;
+        aspect-ratio: 16/9;
+      }
+    }
+  }
+
+  &-detail {
+    @media (min-width: 769px) {
+      width: 50%;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 376px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &-section {
+    padding: 1rem 0;
+  }
+
+  .border-countries {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    p {
+      width: auto;
+      margin-right: 1rem;
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    margin-bottom: 4rem;
+
+    &-buttons {
+      @media (max-width: 768px) {
+        max-width: unset;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      max-width: 70%;
+      display: grid;
+      column-gap: 0.5rem;
+      row-gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 2rem;
+
+      .button {
+        text-align: center;
+        line-height: 2rem;
+        overflow: hidden;
+        border-radius: 3px;
+        cursor: pointer;
+        height: 2rem;
+        width: auto;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+
+  :host-context(.dark) .button {
+    background-color: var(--d-element);
+    color: var(--d-text);
+  }
+
+  :host-context(.light) .button {
+    background-color: var(--l-element);
+    color: var(--l-text);
+  }
+
+}

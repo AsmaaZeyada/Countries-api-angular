@@ -1,0 +1,9 @@
+<div class="drop-down shadow">
+  <div class="drop-down-label" (click)="toggleShowOptions()">
+    <span>{{ placeholder }}</span>
+    <span><i class="fa fa-chevron-down"></i></span>
+  </div>
+  <ul *ngIf="showOptions" class="drop-down-options shadow">
+    <li *ngFor="let value of values" (click)="select(value)">{{ value }}</li>
+  </ul>
+</div>

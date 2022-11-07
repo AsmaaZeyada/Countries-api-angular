@@ -1,0 +1,69 @@
+.country-card {
+  overflow: hidden;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 275px;
+  height: 350px;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  transition: all 0.1s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+	}
+
+
+
+  h2 {
+    font-size: 18px;
+    padding-bottom: 0.5rem;
+  }
+
+  ul, li {
+    list-style: none;
+  }
+
+
+
+  &-img {
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+    }
+  }
+
+  &-info {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  li {
+    padding-bottom: 0.25rem;
+  }
+
+  @media (max-width: 769px) {
+    margin: 30px;
+  }
+
+
+
+  :host-context(.light) .country-card {
+    background-color: var(--l-element);
+  }
+
+  :host-context(.dark) .country-card {
+    background-color: var(--d-element);
+
+    &-img {
+      border: 1px solid var(--d-element);
+      border-style: inset;
+      border-radius: 10px 10px 0 0;
+    }
+
+  }
+
+}
